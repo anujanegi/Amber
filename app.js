@@ -23,6 +23,6 @@ app.use('/', indexRouter);
 
 // API endpoints
 app.use('/user', user);
-// app.use('/ambulance', ambulance);
+app.use('/ambulance', ambulance);
 module.exports = app;
 app.listen(8080);

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const request = require('request');
+
 // hasura graphql endpoint
 const GRAPHQL_ENDPOINT = "https://amber-test3.herokuapp.com/v1/graphql"
 
@@ -24,7 +25,7 @@ function response(res, query) {
 }
 
 router.get('/', function(req, res, next) {
-  query = '{"query" : "{driver {name}}"}';
+  query = '{"query" : "{user {name mobile_number latitude longitude}}"}';
   response(res, query);
 });
 
