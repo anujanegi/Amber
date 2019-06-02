@@ -29,4 +29,23 @@ router.get('/', function(req, res, next) {
   response(res, query);
 });
 
+router.post('/location', function(req, res, next) {
+  number_plate = req.body.nearestDriver.number_plate.id;
+  // number_plate = "KA51P7326";
+  query_ = '{driver(where: {number_plate: {_ilike: "'+ number_plate + '"}}) {latitude longitude}}';
+  query = JSON.stringify({"query" : query_});
+  // console.log(query);
+  response(res, query);
+});
+
+router.post('/book', function(req, res, next){
+  number_plate = req.body.nearestDriver.number_plate.numPlate;
+  // console.log(number_plate);
+  query_ = 'mutation{update_driver(where: {number_plate: {_like: "'+number_plate+'"}}, _set: {on_service: true}) {affected_rows}}';
+  query = JSON.stringify({"query" : query_});
+  // query = '{"query" : "mutation{update_driver(where:{number_plate:{_like:"'+number_plate+'"}}, _set:{on_service: true}){affected_rows}}"}';
+  // console.log(query);
+  response(res, query);
+});
+
 module.exports = router;
