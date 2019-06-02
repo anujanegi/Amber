@@ -7,5 +7,5 @@ Amber enables its users to find the best medical help before it's too late. And 
 
 
 Authors:
-[@anujanegi](github.com/anujanegi)
-[@theishita](github.com/theishita)
+[@anujanegi](https://www.github.com/anujanegi)
+[@theishita](https://www.github.com/theishita)
