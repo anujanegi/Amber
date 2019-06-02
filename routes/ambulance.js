@@ -29,6 +29,13 @@ router.get('/', function(req, res, next) {
   response(res, query);
 });
 
+router.get('/service', function(req, res, next) {
+  number_plate = "KA51K56734"
+  query_ = '{driver(where: {number_plate: {_like: "'+ number_plate + '"}}) {on_service}}';
+  query = JSON.stringify({"query" : query_});
+  response(res, query);
+});
+
 router.post('/location', function(req, res, next) {
   number_plate = req.body.nearestDriver.number_plate.id;
   // number_plate = "KA51P7326";
@@ -47,5 +54,6 @@ router.post('/book', function(req, res, next){
   // console.log(query);
   response(res, query);
 });
+
 
 module.exports = router;
