@@ -21,7 +21,7 @@
     "consolidate": "^0.15.1",
     "cookie-parser": "^1.4.4",
     "debug": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jsonformatter": "^0.7.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1",
